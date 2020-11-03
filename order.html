@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>order</title>
+    <link rel="stylesheet" href="mycss.css">
+	<!-- <script data-require="jquery@3.1.1" data-semver="3.1.1" src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script> -->
+    <script type="text/javascript" src="script.js"></script>
+</head>
+<body>
+<form action='checkout.php' method='post'>
+<div id="wrapper">
+    <div id="leftcolumn">
+        <h1><img id="logo" src="logo.png" style="padding-top: 30px;"></h1>
+        <p style="font-style: italic;">SINGAPORE ECONOMIC<br><br>MIXED RICE </p>
+        <br>
+        <br>
+        <nav>
+            <ul>
+                <li><a href="home.html">HOME</a></li>
+                <li>. . . . . . . . . . . .</li>
+                <li><a href="aboutus.html">ABOUT US</a></li>
+                <li>. . . . . . . . . . . .</li>
+                <li><a href="order.html">ORDER</a></li>
+                <li>. . . . . . . . . . . .</li>
+                <li><a href="checkstatus.html">CHECK STATUS</a></li>
+                <li>. . . . . . . . . . . .</li>
+                <li><a href="contactus.html">CONTACT US</a></li>
+            </ul>
+        </nav>
+    </div>
+	<div id="rightcolumn3">
+	<div class="row">
+	  <div class="subcolumn" style="background-image: url('bg_chicken.jpg'); background-size: 100% 100%">
+		<h2>Meat</h2>
+		<h4>S$1.50 per serving</h4>
+			<ul>
+                <li>Braised Beef
+				<div class="quantity_box">
+				<input type="button" onclick="decrementValue(0)" value="-" class="minus">
+				<input type="text" name="qmeat" value="0" maxlength="2" max="10" min="0" size="1" id="0" class="qty">
+				<input type="button" onclick="incrementValue(0)" value="+" class="plus">
+				</div></li>
+				<li>Black Pepper Beef
+				<div class="quantity_box">
+				<input type="button" onclick="decrementValue(1)" value="-" class="minus">
+				<input type="text" name="qmeat" value="0" maxlength="2" max="10" min="0" size="1" id="1" class="qty">
+				<input type="button" onclick="incrementValue(1)" value="+" class="plus">
+				</div></li>
+				<li>Kung Pao Chicken
+				<div class="quantity_box">
+				<input type="button" onclick="decrementValue(2)" value="-" class="minus">
+				<input type="text" name="qmeat" value="0" maxlength="2" max="10" min="0" size="1" id="2" class="qty">
+				<input type="button" onclick="incrementValue(2)" value="+" class="plus">
+				</div></li>
+                <li>Fried Chicken Wings
+				<div class="quantity_box">
+				<input type="button" onclick="decrementValue(3)" value="-" class="minus">
+				<input type="text" name="qmeat" value="0" maxlength="2" max="10" min="0" size="1" id="3" class="qty">
+				<input type="button" onclick="incrementValue(3)" value="+" class="plus">
+				</div></li>
+                <li>Roasted Pork Ribs
+				<div class="quantity_box">
+				<input type="button" onclick="decrementValue(4)" value="-" class="minus">
+				<input type="text" name="qmeat" value="0" maxlength="2" max="10" min="0" size="1" id="4" class="qty">
+				<input type="button" onclick="incrementValue(4)" value="+" class="plus">
+				</div></li>
+			</ul>
+	  </div>
+	  <div class="subcolumn" style="background-image: url('bg_fish.jpg'); background-size: 100% 100%">
+		<h2>Seafood</h2>
+		<h4>S$2.50 per serving</h4>
+			<ul>
+                <li>Fried Squid
+				<div class="quantity_box">
+				<input type="button" onclick="decrementValue(5)" value="-" class="minus">
+				<input type="text" name="qsea" value="0" maxlength="2" max="10" min="0" size="1" id="5" class="qty">
+				<input type="button" onclick="incrementValue(5)" value="+" class="plus">
+				</div></li>
+				<li>Stir Fried Prawn
+				<div class="quantity_box">
+				<input type="button" onclick="decrementValue(6)" value="-" class="minus">
+				<input type="text" name="qsea" value="0" maxlength="2" max="10" min="0" size="1" id="6" class="qty">
+				<input type="button" onclick="incrementValue(6)" value="+" class="plus">
+				</div></li>
+				<li>Egg Yolk Prawn
+				<div class="quantity_box">
+				<input type="button" onclick="decrementValue(7)" value="-" class="minus">
+				<input type="text" name="qsea" value="0" maxlength="2" max="10" min="0" size="1" id="7" class="qty">
+				<input type="button" onclick="incrementValue(7)" value="+" class="plus">
+				</div></li>
+                <li>Garlic Scallops
+				<div class="quantity_box">
+				<input type="button" onclick="decrementValue(8)" value="-" class="minus">
+				<input type="text" name="qsea" value="0" maxlength="2" max="10" min="0" size="1" id="8" class="qty">
+				<input type="button" onclick="incrementValue(8)" value="+" class="plus">
+				</div></li>
+                <li>Boiled Fish Fillet
+				<div class="quantity_box">
+				<input type="button" onclick="decrementValue(9)" value="-" class="minus">
+				<input type="text" name="qsea" value="0" maxlength="2" max="10" min="0" size="1" id="9" class="qty">
+				<input type="button" onclick="incrementValue(9)" value="+" class="plus">
+				</div></li>
+			</ul>
+		</div>
+		<div class="subcolumn" style="background-image: url('bg_broc.jpg'); background-size: 100% 100%">
+		<h2>Vegetable</h2>
+		<h4>S$1.00 per serving</h4>
+			<ul>
+				<li>Spicy Tofu
+				<div class="quantity_box">
+				<input type="button" onclick="decrementValue(10)" value="-" class="minus">
+				<input type="text" name="qvege" value="0" maxlength="2" max="10" min="0" size="1" id="10" class="qty">
+				<input type="button" onclick="incrementValue(10)" value="+" class="plus">
+				</div></li>
+				<li>Cold Cucumber<div class="quantity_box">
+				<input type="button" onclick="decrementValue(11)" value="-" class="minus">
+				<input type="text" name="qvege" value="0" maxlength="2" max="10" min="0" size="1" id="11" class="qty">
+				<input type="button" onclick="incrementValue(11)" value="+" class="plus">
+				</div></li>
+                <li>Steamed Pumpkin
+				<div class="quantity_box">
+				<input type="button" onclick="decrementValue(12)" value="-" class="minus">
+				<input type="text" name="qvege" value="0" maxlength="2" max="10" min="0" size="1" id="12" class="qty">
+				<input type="button" onclick="incrementValue(12)" value="+" class="plus">
+				</div></li>
+                <li>Stir Fried Broccoli
+				<div class="quantity_box">
+				<input type="button" onclick="decrementValue(13)" value="-" class="minus">
+				<input type="text" name="qvege" value="0" maxlength="2" max="10" min="0" size="1" id="13" class="qty">
+				<input type="button" onclick="incrementValue(13)" value="+" class="plus">
+				</div></li>
+				<li>Eggplant with Sauce
+				<div class="quantity_box">
+				<input type="button" onclick="decrementValue(14)" value="-" class="minus">
+				<input type="text" name="qvege" value="0" maxlength="2" max="10" min="0" size="1" id="14" class="qty">
+				<input type="button" onclick="incrementValue(14)" value="+" class="plus">
+				</div></li>
+			</ul>
+		</div>
+		<div class="subcolumn" style="background-image: url('bg_drink.jpg'); background-size: 100% 100%">
+		<h2>Main</h2>
+		<h4>S$0.50 per serving</h4>
+			<ul>
+                <li>Rice
+				<div class="quantity_box">
+				<input type="button" onclick="decrementValue(15)" value="-" class="minus">
+				<input type="text" name="qmain" value="0" maxlength="2" max="10" min="0" size="1" id="15" class="qty">
+				<input type="button" onclick="incrementValue(15)" value="+" class="plus">
+				</div></li>
+				<li>Noodles
+				<div class="quantity_box">
+				<input type="button" onclick="decrementValue(16)" value="-" class="minus">
+				<input type="text" name="qmain" value="0" maxlength="2" max="10" min="0" size="1" id="16" class="qty">
+				<input type="button" onclick="incrementValue(16)" value="+" class="plus">
+				</div></li>
+				<li>Porridge
+				<div class="quantity_box">
+				<input type="button" onclick="decrementValue(17)" value="-" class="minus">
+				<input type="text" name="qmain" value="0" maxlength="2" max="10" min="0" size="1" id="17" class="qty">
+				<input type="button" onclick="incrementValue(17)" value="+" class="plus">
+				</div></li>
+			</ul>
+		<h2>Drinks</h2>
+		<h4>S$2.00 per serving</h4>
+			<ul>
+                <li>Orange Juice
+				<div class="quantity_box">
+				<input type="button" onclick="decrementValue(18)" value="-" class="minus">
+				<input type="text" name="qdrink" value="0" maxlength="2" max="10" min="0" size="1" id="18" class="qty">
+				<input type="button" onclick="incrementValue(18)" value="+" class="plus">
+				</div></li>
+				<li>Ice Lemon Tea
+				<div class="quantity_box">
+				<input type="button" onclick="decrementValue(19)" value="-" class="minus">
+				<input type="text" name="qdrink" value="0" maxlength="2" max="10" min="0" size="1" id="19" class="qty">
+				<input type="button" onclick="incrementValue(19)" value="+" class="plus">
+				</div></li>
+				<li>Barley Water
+				<div class="quantity_box">
+				<input type="button" onclick="decrementValue(20)" value="-" class="minus">
+				<input type="text" name="qdrink" value="0" maxlength="2" max="10" min="0" size="1" id="20" class="qty">
+				<input type="button" onclick="incrementValue(20)" value="+" class="plus">
+				</div></li>
+			</ul>
+		</div>
+	</div>
+	</div>
+</div>
+<div id='checkout'>
+<input type="submit" value="CHECKOUT" onclick="getOrder();">
+</div>
+</form>
+</body>
+</html>
